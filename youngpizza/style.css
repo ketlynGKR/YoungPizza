@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --laranja: #F33B23;
+  --bege: #F2DCB7;
+  --azul: #011725;
+}
+
+body {
+  background-color: var(--azul);
+}
+
+#hero {
+  height: 100vh;
+  background-image: url(/img/fundo_inicio.png);
+  background-size: cover;        /* Faz a imagem cobrir todo o container */
+  background-position: center;   /* Centraliza a imagem */
+  background-repeat: no-repeat;  /* Evita que a imagem se repita */
+}
+
+header {
+  position: relative;
+  z-index: 10; /* maior que o carrossel */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* manda um pro lado e outro pro outro */
+  align-items: center; /* centraliza verticalmente */
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.041);
+  padding: 2vh;
+  border-radius: 0 0 7vh 7vh;
+  border-bottom: 2px solid var(--laranja);
+}
+
+.logo {
+  color: var(--laranja);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px var(--laranja);
+  margin-left: 5vh;
+}
+
+.menu {
+  font-size: 13px;
+  margin-right: 5vh;
+  text-transform: uppercase;
+  float: right;
+}
+
+.menu a {
+  padding: 2vh;
+  color: var(--bege);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu a {
+  font-family: "Lexend", sans-serif;
+  font-weight: bold;
+  margin: 0.3vh;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--laranja);
+  border-radius: 25px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.hamburger {
+  font-size: 24px;
+  color: var(--bege);
+  background-color: var(--laranja);
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 13px;
+  cursor: pointer;
+  display: none; 
+  margin-left: auto;
+}
+.hamburger.clicked {
+  border-radius: 13px 13px 0 0;
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: none; /* esconde no mobile */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.041);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 50px; /* altura do header */
+    right: 54px;
+    width: 190px;
+    height: 150px;
+    border-radius: 20px 0 20px 20px;
+    padding: 10px;
+    border-top: 2px solid var(--laranja);
+    border-bottom: 2px solid var(--laranja);
+  }
+  .menu a {
+    margin: 6px 0; /* espaçamento entre os links */
+    display: block; /* cada link ocupa linha inteira */
+    text-align: center;
+  }
+
+  .menu ul.active {
+    display: flex; /* aparece quando clica */
+  }
+
+  .hamburger {
+    display: block; /* aparece no mobile */
+  }
+}
+
+.carrosel {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.ativo {
+  opacity: 1;
+}
+
+.product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.pizza {
+  opacity: 1;
+  height: 60vh;
+  filter: drop-shadow(0 0 40px rgba(242, 220, 183, 0.4));
+}
+
+.PizzaSobreposta {
+  opacity: 0;
+  height: 20vh;
+}
+
+.texto {
+  padding: 2vh;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: "Lexend", sans-serif;
+  font-style: italic;
+  font-size: 3.5vh;
+  color: var(--laranja);
+  text-transform: uppercase;
+}
+
+p {
+  color:  var(--bege);
+}
+
+.cursiva {
+  font-size: 25px;
+  font-family: "Dancing Script";
+  margin-bottom: 10px;
+}
+
+.h2-cor {
+  font-family: "Lexend", sans-serif;
+  color:  var(--bege);
+}
+
+.p-cor {
+  color: var(--azul);
+}
+
+.descricao {
+  font-size: 13px;
+}
+
+h4 {
+  color: var(--bege);
+}
+
+.slide button {
+  position: relative;
+  z-index: 5; /* maior que imagem e outros elementos */
+}
+
+button {
+  font-family: "Lexend", sans-serif;
+  text-transform: uppercase;
+  background-color: var(--laranja);
+  color: var(--bege);
+  font-weight: bold;
+  margin-top: 18px;
+  padding: 13px;
+  border: none;  
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+}
+
+.texto {
+  position: relative;
+  z-index: 2;
+}
+
+.texto button {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#avaliacoes {
+  background-color: var(--laranja);
+}
+
+/* Quando a tela for menor que 768px */
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column; /* empilha: imagem em cima, texto embaixo */
+    text-align: center;
+  }
+  .texto{
+    margin: 45px;
+  }
+  .slide .product-img img {
+    width: 280px;
+    height: 260px;
+  }
+}

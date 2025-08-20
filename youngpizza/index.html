@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>YoungPizza</title>
+</head>
+<body>
+
+  <!-- 2. Seção de Destaque (Carrossel de pizzas) -->
+  <section id="hero"> 
+      <!-- 1. Header / Navbar -->
+  <header>
+    <!-- Logo e menu de navegação -->
+    <div class="container">
+      <h1 class="logo">YoungPizza</h1>
+       <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#avaliacoes">Avaliações</a>
+              <a href="#cardapio">Cardápio</a>
+              <a href="#contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  
+    <!-- Slides com imagem da pizza, título, descrição e botão -->
+    <div class="carrosel">
+      <!-- Novidades  -->
+      <div class="slide ativo">
+        <div class="product-img"><img src="/img/pizza1.png" alt="Pizza 1" class="pizza"></div>
+        <div class="texto">
+          <h2>Novidades do Forno</h2>
+          <p class="cursiva">Conheça nossos sabores exclusivos!</p>
+          <p class="descricao">Experimente combinações exclusivas criadas pelos nossos pizzaiolos. Edições limitadas, ingredientes especiais e muito sabor esperando por você. </p>
+          <button>Saiba Mais</button>
+        </div>
+      </div>
+        <!-- Promoção  -->
+      <div class="slide">
+          <div class="product-img"><img src="/img/pizza1.png" alt="Pizza 1" class="pizza"></div>
+          <div class="texto">
+            <h2>Promoção da semana</h2>
+            <p>Peça uma pizza grande e ganhe uma média com 50% de desconto!</p>
+            <p>Aproveite essa oportunidade para saborear ainda mais nossas delícias. Só até domingo! </p>
+            <button>Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+        <!-- Combo  -->
+      <div class="slide">
+          <div class="product-img"><img src="/img/pizza4.png" alt="Pizza 4" class="pizza"></div>
+          <div class="texto">
+            <h2>Combo da semana</h2>
+            <p>Garanta sua pizza média e ganhe refrigerante grátis!</p>
+            <p>Promoção exclusiva e por tempo limitado. Corra que é só até domingo!</p>
+            <button>Saiba Mais</button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <img src="/img/pizza1.png" alt="Pizza" class="PizzaSobreposta">
+
+  <!-- 3. Seção de Avaliações -->
+  <section id="avaliacoes">
+    <!-- Título, carrossel ou cards de avaliações -->
+      <h2 class="h2-cor">Avaliações</h2>
+  <div class="carouselAvaliacoes">
+    <div class="avaliacaoCard">
+        <span>⭐️⭐️⭐️⭐️⭐️</span>
+      <p class="p-cor">"Melhor pizza da cidade!"</p>
+    </div>
+    <!-- Mais avaliações -->
+  </div>
+  </section>
+
+  <!-- 4. Seção de Cardápio -->
+  <section id="cardapio">
+    <!-- Título e grid de cards de pizza -->
+     <h2 class="h2-cor">Cardápio</h2>
+  <div class="grid-cardapio">
+    <div class="card-pizza">
+      <img src="/img/pizza1.png" alt="Pizza Calabresa" class="pizza">
+      <h3 class="p-cor">Calabresa</h3>
+      <p class="p-cor">Molho, mussarela, calabresa, cebola</p>
+      <button>Ver mais</button>
+    </div>
+    <!-- Mais pizzas -->
+  </div>
+  <button class="ver-mais">Ver tudo</button>
+  </section>
+
+  <!-- 5. Rodapé -->
+  <footer id="contato">
+    <!-- Sobre / Localização / Horário de funcionamento / Contato -->
+     <div class="footer-container">
+    <div class="coluna">
+      <h4>YoungPizza</h4>
+      <p>A melhor pizzaria da cidade.</p>
+    </div>
+    <div class="coluna">
+      <h4>Localização</h4>
+      <iframe src="MAPA"></iframe>
+    </div>
+    <div class="coluna">
+      <h4>Horários</h4>
+      <p>Seg a Dom: 18h - 23h</p>
+      <h4>Contato</h4>
+      <p>(99) 99999-9999</p>
+    </div>
+  </div>
+     <p>© 2025 YoungPizza — Projeto fictício criado para fins de portfólio. Desenvolvido por Ketlyn.</p> 
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
