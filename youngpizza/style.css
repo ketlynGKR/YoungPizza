@@ -17,11 +17,7 @@ body {
 }
 
 #hero {
-  height: 100vh;
-  background-image: url(/img/fundo_inicio.png);
-  background-size: cover;        /* Faz a imagem cobrir todo o container */
-  background-position: center;   /* Centraliza a imagem */
-  background-repeat: no-repeat;  /* Evita que a imagem se repita */
+  height: 90vh;
 }
 
 header {
@@ -99,41 +95,10 @@ header {
   border-radius: 13px 13px 0 0;
 }
 
-@media (max-width: 768px) {
-  .menu ul {
-    display: none; /* esconde no mobile */
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.041);
-    backdrop-filter: blur(20px);
-    position: absolute;
-    top: 50px; /* altura do header */
-    right: 54px;
-    width: 190px;
-    height: 150px;
-    border-radius: 20px 0 20px 20px;
-    padding: 10px;
-    border-top: 2px solid var(--laranja);
-    border-bottom: 2px solid var(--laranja);
-  }
-  .menu a {
-    margin: 6px 0; /* espaçamento entre os links */
-    display: block; /* cada link ocupa linha inteira */
-    text-align: center;
-  }
-
-  .menu ul.active {
-    display: flex; /* aparece quando clica */
-  }
-
-  .hamburger {
-    display: block; /* aparece no mobile */
-  }
-}
-
 .carrosel {
   width: 80%;
   height: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
   position: relative;
   flex-direction: column;
   display: flex;
@@ -198,6 +163,8 @@ p {
 .h2-cor {
   font-family: "Lexend", sans-serif;
   color:  var(--bege);
+  text-align: center;
+  padding: 20px 0 15px 0;
 }
 
 .p-cor {
@@ -244,9 +211,117 @@ button {
   cursor: pointer;
 }
 
+.setas {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
 #avaliacoes {
+  padding: 20px;
+  height: 60vh;
   background-color: var(--laranja);
 }
+
+.linha {
+  height: 3px;
+  background-color: var(--bege);
+}
+
+#linha_margem {
+  margin-top: 200px;
+}
+
+.carouselAvaliacoes {
+  display: flex;
+  flex-direction: column; /* empilha os cards e depois os botões */
+  align-items: center;
+  position: relative;
+}
+
+.avaliacaoCard {
+  width: 35vh;
+  background-color: var(--bege);
+  border-radius: 70px 0 70px 0;
+  box-shadow: 3px 3px 0 3px #D0BB96;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transition: 0.5s;
+  left: calc(50% - 140px);
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 25px 0;
+}
+
+.p-cor {
+  text-align: center;
+  margin: 0 25px 25px 25px;
+}
+
+.controles {
+  margin-top: 90px;
+  display: flex;
+  gap: 320px;
+  justify-content: center;
+}
+.seta {
+  color: var(--bege);
+  font-size: 22px;
+  font-weight: bold;
+  border: 2px solid var(--bege);
+  background-color: transparent;
+  font-family: monospace;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.seta:hover {
+  background-color: #ffd79267;
+}
+
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: none; /* esconde no mobile */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.041);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 50px; /* altura do header */
+    right: 54px;
+    width: 190px;
+    height: 150px;
+    border-radius: 20px 0 20px 20px;
+    padding: 10px;
+    border-top: 2px solid var(--laranja);
+    border-bottom: 2px solid var(--laranja);
+  }
+  .menu a {
+    margin: 6px 0; /* espaçamento entre os links */
+    display: block; /* cada link ocupa linha inteira */
+    text-align: center;
+  }
+
+  .menu ul.active {
+    display: flex; /* aparece quando clica */
+  }
+
+  .hamburger {
+    display: block; /* aparece no mobile */
+  }
+}
+
 
 /* Quando a tela for menor que 768px */
 @media (max-width: 768px) {
