@@ -219,7 +219,7 @@ button {
 
 #avaliacoes {
   padding: 20px;
-  height: 60vh;
+  height: 65vh;
   background-color: var(--laranja);
 }
 
@@ -229,7 +229,7 @@ button {
 }
 
 #linha_margem {
-  margin-top: 200px;
+  margin-top: 25px;
 }
 
 .carouselAvaliacoes {
@@ -290,6 +290,11 @@ span {
   background-color: #ffd79267;
 }
 
+.btn-avaliar {
+  margin-top: 22vh;
+  background-color: var(--azul);
+  z-index: 1;
+}
 
 @media (max-width: 768px) {
   .menu ul {
